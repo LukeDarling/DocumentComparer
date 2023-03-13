@@ -17,7 +17,7 @@ rootWindow.attributes('-alpha', 0)
 # Request original folder
 originalFolder = filedialog.askdirectory(title="Select original document folder:")
 if originalFolder == "":
-    exit()
+    quit()
 # Check whether selected folder is the root folder
 # If not, move up a directory
 (originalParentFolder, originalFolderName) = os.path.split(originalFolder)
@@ -27,7 +27,7 @@ if originalFolderName.lower() == IMPORT_FOLDER_NAME.lower() or originalFolderNam
 # Request revised folder
 revisedFolder = filedialog.askdirectory(title="Select revised document folder:")
 if revisedFolder == "":
-    exit()
+    quit()
 # Check whether selected folder is the root folder
 # If not, move up a directory
 (revisedParentFolder, revisedFolderName) = os.path.split(revisedFolder)
